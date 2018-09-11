@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "589753251174",
+    "firebase_url": "https://tlog-750e6.firebaseio.com",
+    "project_id": "tlog-750e6",
+    "storage_bucket": "tlog-750e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589753251174:android:010d88ec9d0cf535",
+        "android_client_info": {
+          "package_name": "com.practisianprogrammer.siam.tlogtourblog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589753251174-gtit6iui6n3g1hq40585j2snffkcrgm2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.practisianprogrammer.siam.tlogtourblog",
+            "certificate_hash": "b677d8d169d4cbdec899046e5a03fa47afe42074"
+          }
+        },
+        {
+          "client_id": "589753251174-jjc53kkjbtagbf6rf8r18gii376ohivk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr_9r_Ez6avg09QZx_985XJbmRrpkpxk4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589753251174-jjc53kkjbtagbf6rf8r18gii376ohivk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

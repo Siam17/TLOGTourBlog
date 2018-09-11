@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TLOG(Tour Blog)</string>
+    <string name="pass_hint">your password</string>
+    <string name="email_hint">your email</string>
+    <string name="login_logo_desc">logo login page</string>
+    <string name="button_login">Login</string>
+    <string name="button_signup" />
+    <string name="logoSignUp">LogoSignUp</string>
+    <string name="signUpEmai">signUpEmail</string>
+    <string name="signUpEmaiField">Email</string>
+</resources>
