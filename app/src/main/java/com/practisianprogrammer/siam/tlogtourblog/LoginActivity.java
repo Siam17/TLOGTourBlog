@@ -1,10 +1,14 @@
 package com.practisianprogrammer.siam.tlogtourblog;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,15 +37,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loginEmailText = (EditText) findViewById(R.id.loginEmail);
-        loginPassText = (EditText) findViewById(R.id.loginPassword);
-        loginButton = (Button) findViewById(R.id.buttonLogin);
-        signUpButton = (Button) findViewById(R.id.buttonSignUp);
+        loginEmailText = (EditText) findViewById(R.id.reg_email);
+        loginPassText = (EditText) findViewById(R.id.reg_confirm_password);
+        loginButton = (Button) findViewById(R.id.login_btn);
+        signUpButton = (Button) findViewById(R.id.buttonRegister);
         loginProgressBar = (ProgressBar) findViewById(R.id.progressBarLogin);
         loginProgressBar.setVisibility(View.INVISIBLE);
 
 
         fAuth = FirebaseAuth.getInstance();
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +80,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                /*if(hasConnection()==false){
+                        Toast.makeText(LoginActivity.this,"No internet",Toast.LENGTH_LONG).show();
+                }*/
+
+
+                Intent regIntent= new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(regIntent);
+                finish();
+
             }
         });
     }
@@ -93,5 +107,25 @@ public class LoginActivity extends AppCompatActivity {
         Intent mainIntent= new Intent(LoginActivity.this, MainActivity.class);
         startActivity(mainIntent);
         finish();
+    }
+
+    protected boolean hasConnection() {
+        try
+        {
+            //do some stuff here
+            ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo netInfo = cm.getActiveNetworkInfo();
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                return true;
+            }
+
+        }
+        catch(Exception e)
+        {
+            Log.d("EXCEPTION: " ,  e.getMessage());
+        }
+        return false;
+
+
     }
 }

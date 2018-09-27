@@ -8,4 +8,19 @@
     <string name="logoSignUp">LogoSignUp</string>
     <string name="signUpEmai">signUpEmail</string>
     <string name="signUpEmaiField">Email</string>
+    <string name="action_search_text">Search</string>
+    <string name="action_setting_text">Account Settings</string>
+
+
+    <string name="action_settings_text">Settings</string>
+    <string name="action_logout_text">Logout</string>
+    <string name="reg_btn_text">Create new Account</string>
+    <string name="reg_login_text">Already have an Account?</string>
+    <string name="reg_pass_text">Password</string>
+    <string name="reg_conf_pass_text">Confirm Password</string>
+    <string name="btn_reg_text">Create Account</string>
+    <string name="account_name_hint">Your Name</string>
+    <string name="account_update_name_btn_text">Save Account Settings</string>
+
+
 </resources>
